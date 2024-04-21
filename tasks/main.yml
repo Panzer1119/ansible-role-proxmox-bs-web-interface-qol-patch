@@ -4,20 +4,10 @@
     file: "disable-no-subscription-warning.yml"
   when: "disable_no_subscription_warning"
 
-- name: "Flatten the Snapshot Tree"
-  include_tasks:
-    file: "flatten-snapshot-tree.yml"
-  when: "flatten_snapshot_tree"
-
 - name: "Add CPU Temperature to Summary"
   include_tasks:
     file: "add-cpu-temperature-to-summary.yml"
   when: "add_cpu_temperature_to_summary"
-
-- name: "Uncolor Irrelevant Critical Icons"
-  include_tasks:
-    file: "uncolor-irrelevant-critical-icons.yml"
-  when: "uncolor_irrelevant_critical_icons"
 
 - name: "Uncolor No Subscription Icon"
   include_tasks:
