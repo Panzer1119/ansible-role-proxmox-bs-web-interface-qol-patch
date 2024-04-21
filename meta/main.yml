@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: proxmox_ve_web_interface_qol_patch
+  role_name: proxmox_bs_web_interface_qol_patch
   author: Panzer1119
   description: Applies some quality of life improvement patches to the web interface
   license: Apache-2.0
