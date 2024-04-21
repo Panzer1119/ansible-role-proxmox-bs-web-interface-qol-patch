@@ -5,4 +5,4 @@
     regexp: '\.data\.status\.toLowerCase\(\) !== .active.\) \{'
     replace: ".data.status.toLowerCase() !== 'active' && false) {"
     backup: true
-  notify: "Restart PVE Proxy"
+  notify: "Restart PBS Proxy"

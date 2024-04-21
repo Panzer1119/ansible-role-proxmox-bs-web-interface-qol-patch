@@ -22,4 +22,4 @@
       \1iconCls: PVE.Utils.get_health_icon('critical-uncolored', true),
       \2text: gettext('You have at least one node without subscription.'),
     backup: true
-  notify: "Restart PVE Proxy"
+  notify: "Restart PBS Proxy"

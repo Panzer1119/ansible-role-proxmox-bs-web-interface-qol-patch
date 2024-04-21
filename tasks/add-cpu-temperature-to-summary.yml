@@ -78,4 +78,4 @@
       
           updateTitle: function() {
     backup: true
-  notify: "Restart PVE Proxy"
+  notify: "Restart PBS Proxy"

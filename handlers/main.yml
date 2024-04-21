@@ -1,6 +1,6 @@
 ---
-- name: "Restart PVE Proxy"
+- name: "Restart PBS Proxy"
   service:
-    name: "pveproxy"
+    name: "proxmox-backup-proxy"
     state: "restarted"
-    
+

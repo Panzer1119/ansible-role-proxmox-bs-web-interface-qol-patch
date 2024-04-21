@@ -5,4 +5,4 @@
     regexp: 'fmt\(gettext\(''Non production-ready repository enabled!''\), ''exclamation-circle.*?''\);'
     replace: "fmt(gettext('Non production-ready repository enabled!'), 'exclamation-circle');"
     backup: true
-  notify: "Restart PVE Proxy"
+  notify: "Restart PBS Proxy"
