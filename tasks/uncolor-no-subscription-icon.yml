@@ -1,25 +1,10 @@
 ---
-- name: "Add health icon critical-uncolored to pvemanagerlib.js"
+- name: "Uncolor the No-Subscription-Icon in proxmox-backup-gui.js"
   replace:
-    path: "/usr/share/pve-manager/js/pvemanagerlib.js"
-    regexp: 'case ''critical'':\n(.*?)icon = ''critical fa-times'';\n(.*?)break;\n(.*?)default: break;\n'
+    path: "/usr/share/javascript/proxmox-backup/js/proxmox-backup-gui.js"
+    regexp: 'case\s*0:\n(\s*)icon\s*=\s*''times-circle(\s*critical)?'';'
     replace: |
-      case 'critical':
-      \1icon = 'critical fa-times';
-      \2break;
-      \3case 'critical-uncolored':
-      \1icon = 'fa-times';
-      \2break;
-      \3default: break;
-    backup: true
-
-- name: "Uncolor the No-Subscription-Icon in pvemanagerlib.js"
-  replace:
-    path: "/usr/share/pve-manager/js/pvemanagerlib.js"
-    regexp: 'title: gettext\(''No Subscription''\),\n(.*?)iconCls: PVE\.Utils\.get_health_icon\(.+?, true\),\n(.*?)text: gettext\(''You have at least one node without subscription\.''\),\n'
-    replace: |
-      title: gettext('No Subscription'),
-      \1iconCls: PVE.Utils.get_health_icon('critical-uncolored', true),
-      \2text: gettext('You have at least one node without subscription.'),
+      case 0:
+      \1icon = 'times-circle';
     backup: true
   notify: "Restart PBS Proxy"
